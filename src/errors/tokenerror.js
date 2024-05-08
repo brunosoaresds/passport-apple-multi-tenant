@@ -6,7 +6,7 @@ class TokenError extends Error {
         this.message = message;
         this.code = code || 'invalid_request';
         this.uri = uri;
-        this.status = status || 500;
+        this.status = status || 400;
     }
 }
 

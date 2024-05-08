@@ -20,7 +20,7 @@ class AuthorizationError extends Error {
         this.message = message;
         this.code = code || 'server_error';
         this.uri = uri;
-        this.status = status || 500;
+        this.status = status || 403;
     }
 }
 

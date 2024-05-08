@@ -140,11 +140,11 @@ class AppleStrategy extends passport.Strategy {
                                         profile.email = jwtClaims.email;
                                     }
 
-                                    if (jwtClaims.email_verified) {
-                                        profile.emailVerified = Boolean(jwtClaims.email_verified === 'true');
+                                    if (jwtClaims.email_verified !== undefined) {
+                                        profile.emailVerified = Boolean(jwtClaims.email_verified === 'true') || jwtClaims.email_verified === true;
                                     }
 
-                                    if (jwtClaims.is_private_email  !== undefined) {
+                                    if (jwtClaims.is_private_email !== undefined) {
                                         profile.isPrivateEmail = Boolean(jwtClaims.is_private_email === 'true') || jwtClaims.is_private_email === true
                                     }
 
