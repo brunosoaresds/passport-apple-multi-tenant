@@ -1,0 +1,4 @@
+node_modules/
+.AppleDouble
+.idea
+package-lock.json
