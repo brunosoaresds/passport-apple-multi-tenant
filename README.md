@@ -20,6 +20,7 @@ npm install --save passport-apple-multi-tenant
     - `keyFilePath`: File path to Apple Key; library will load content using `fs.readFileSync`
     - `scope`: An array of scopes, e.g., `['email', 'name']`
     - `callbackURL`: Callback URL configured and authorized on your apple service provider
+    - `queryMode`: Boolean true if you want to use code query param redirect auth flow or false otherwise
 - `authorizationURL`: (Optional) Authorization URL; default is `https://appleid.apple.com/auth/authorize`
 - `tokenURL`: (Optional) Token URL; default is `https://appleid.apple.com/auth/token`
 - `sessionKey`: (Optional) Session Key
