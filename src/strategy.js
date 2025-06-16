@@ -189,12 +189,12 @@ class AppleStrategy extends passport.Strategy {
             } else {
                 const params = {
                     client_id: clientInfo.clientID,
-                    response_type: 'code id_token',
-                    response_mode: 'form_post',
+                    response_type: clientInfo.queryMode === true ? 'code' : 'code id_token',
+                    response_mode: clientInfo.queryMode === true ? 'query' : 'form_post',
                     redirect_uri: clientInfo.callbackURL,
                 };
                 let scope = clientInfo.scope;
-                if (scope) {
+                if (scope && clientInfo.queryMode !== true) {
                     params.scope = scope.join(' ');
                 }
 

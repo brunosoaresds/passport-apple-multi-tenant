@@ -1,6 +1,6 @@
 {
   "name": "passport-apple-multi-tenant",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Bruno Soares da Silva",
   "license": "MIT",
   "description": "Passport strategy for Sign in with Apple - Tenant Configuration Based",
