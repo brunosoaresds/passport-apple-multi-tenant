@@ -33,6 +33,7 @@ export interface ClientGeneratorResult {
     keyFilePath?: string;
     callbackURL?: string;
     scope?: string[];
+    queryMode?: boolean;
 }
 
 export interface AuthenticateOptions {
